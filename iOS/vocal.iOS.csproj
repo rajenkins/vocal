@@ -141,6 +141,7 @@
     <BundleResource Include="Resources\seven.jpg" />
     <BundleResource Include="Resources\six.jpg" />
     <BundleResource Include="Resources\ten.jpg" />
+    <BundleResource Include="Resources\play.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\vocal\vocal.csproj">

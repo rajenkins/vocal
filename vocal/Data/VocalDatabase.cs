@@ -7,7 +7,7 @@ namespace vocal
 {
 	public class VocalDatabase
 	{
-
+		Boolean FlagIsPopulated;
 		readonly SQLiteAsyncConnection database;
 
 		public VocalDatabase(string dbPath)
