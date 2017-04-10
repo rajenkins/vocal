@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{AE2CB176-5809-4147-8A93-B1472FE06298}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>cards.Droid</RootNamespace>
+    <RootNamespace>vocal.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
@@ -14,7 +14,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <AssemblyName>cards.Droid</AssemblyName>
+    <AssemblyName>vocal.Droid</AssemblyName>
     <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidTlsProvider></AndroidTlsProvider>
   </PropertyGroup>

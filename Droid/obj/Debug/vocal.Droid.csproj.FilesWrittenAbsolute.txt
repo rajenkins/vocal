@@ -94,3 +94,7 @@
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/bin/Debug/Xamarin.Forms.Platform.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/bin/Debug/cards.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/bin/Debug/cards.dll.mdb
+/Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/bin/Debug/vocal.Droid.dll.mdb
+/Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/bin/Debug/vocal.Droid.dll
+/Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/vocal.Droid.dll
+/Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/vocal.Droid.dll.mdb

@@ -1,4 +1,4 @@
-/Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/cards.Droid.dll
+/Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/vocal.Droid.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/System.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/System.Xml.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/System.Core.dll
