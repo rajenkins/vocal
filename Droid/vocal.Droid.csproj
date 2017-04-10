@@ -84,12 +84,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cards\cards.csproj">
-      <Project>{FDA8F06D-6921-476F-8B7E-B153B70C5AF2}</Project>
-      <Name>cards</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +122,12 @@
     <AndroidResource Include="Resources\drawable-nodpi\seven.jpg" />
     <AndroidResource Include="Resources\drawable-nodpi\six.jpg" />
     <AndroidResource Include="Resources\drawable-nodpi\ten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cards\vocal.csproj">
+      <Project>{FDA8F06D-6921-476F-8B7E-B153B70C5AF2}</Project>
+      <Name>vocal</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

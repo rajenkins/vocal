@@ -18,7 +18,7 @@
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/Xamarin.Forms.Core.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/Xamarin.Forms.Xaml.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/Xamarin.Forms.Platform.dll
-/Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/cards.dll
+/Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/vocal.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/mscorlib.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/System.Net.Http.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/Droid/obj/Debug/android/assets/System.Runtime.Serialization.dll

@@ -46,3 +46,5 @@
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/bin/iPhoneSimulator/Debug/cards.dll
 /Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/bin/iPhoneSimulator/Debug/cards.dll.mdb
+/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/bin/iPhoneSimulator/Debug/vocal.dll
+/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/bin/iPhoneSimulator/Debug/vocal.dll.mdb

@@ -16,7 +16,7 @@
 	--sdk \
 	10.3 \
 	--targetver \
-	7.0 \
+	9.0 \
 	--http-message-handler=HttpClientHandler \
 	--abi=i386 \
 	--symbollist \
@@ -39,7 +39,7 @@
 	-r \
 	"/Users/jenkinsr/Documents/Classes/COMP 580/vocal/packages/Xamarin.Forms.2.3.0.49/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll" \
 	-r \
-	"/Users/jenkinsr/Documents/Classes/COMP 580/vocal/cards/bin/Debug/cards.dll" \
+	"/Users/jenkinsr/Documents/Classes/COMP 580/vocal/cards/bin/Debug/vocal.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
@@ -313,7 +313,7 @@
 	-r \
 	"/Users/jenkinsr/Documents/Classes/COMP 580/vocal/packages/Xamarin.Forms.2.3.0.49/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll" \
 	-r \
-	"/Users/jenkinsr/Documents/Classes/COMP 580/vocal/cards/bin/Debug/cards.dll" \
+	"/Users/jenkinsr/Documents/Classes/COMP 580/vocal/cards/bin/Debug/vocal.dll" \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
 	"/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/bin/iPhoneSimulator/Debug/cards.iOS.exe" \

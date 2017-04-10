@@ -87,12 +87,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cards\cards.csproj">
-      <Project>{FDA8F06D-6921-476F-8B7E-B153B70C5AF2}</Project>
-      <Name>cards</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
@@ -129,5 +123,11 @@
     <BundleResource Include="Resources\seven.jpg" />
     <BundleResource Include="Resources\six.jpg" />
     <BundleResource Include="Resources\ten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cards\vocal.csproj">
+      <Project>{FDA8F06D-6921-476F-8B7E-B153B70C5AF2}</Project>
+      <Name>vocal</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
