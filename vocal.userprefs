@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{AE2CB176-5809-4147-8A93-B1472FE06298}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Resources/Resource.designer.cs">
+    <Files>
+      <File FileName="cards/App.cs" Line="21" Column="23" />
+      <File FileName="iOS/AppDelegate.cs" Line="25" Column="25" />
+      <File FileName="Droid/Resources/Resource.designer.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.vocal.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B459F545-EA3C-4FF1-9DBE-D0E74D587E4D" />
+</Properties>
