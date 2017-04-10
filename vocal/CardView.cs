@@ -10,6 +10,7 @@
 //  IN THE SOFTWARE.
 //
 using Xamarin.Forms;
+using SQLite;
 
 namespace vocal
 {

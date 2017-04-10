@@ -15,10 +15,25 @@ namespace vocal
 {
 	public class App : Application
 	{
+
+		static VocalDatabase database;
+
 		public App ()
 		{
 			// The root page of your application
 			MainPage = new MainPage();
+		}
+
+		public static VocalDatabase Database
+		{
+			get
+			{
+				if (database == null)
+				{
+					database = new VocalDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+				}
+				return database;
+			}
 		}
 
 		protected override void OnStart ()
