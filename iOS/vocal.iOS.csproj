@@ -125,7 +125,7 @@
     <BundleResource Include="Resources\ten.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cards\vocal.csproj">
+    <ProjectReference Include="..\vocal\vocal.csproj">
       <Project>{FDA8F06D-6921-476F-8B7E-B153B70C5AF2}</Project>
       <Name>vocal</Name>
     </ProjectReference>

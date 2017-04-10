@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vocal", "cards\vocal.csproj", "{FDA8F06D-6921-476F-8B7E-B153B70C5AF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vocal", "vocal\vocal.csproj", "{FDA8F06D-6921-476F-8B7E-B153B70C5AF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vocal.iOS", "iOS\vocal.iOS.csproj", "{D706414C-3AE4-4EC3-8848-EE8125DF3793}"
 EndProject
