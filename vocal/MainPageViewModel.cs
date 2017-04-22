@@ -72,21 +72,21 @@ namespace vocal
 			//App.Database.SaveItemAsync(addUser);
 
 
-			returnedUser = App.Database.GetItemAsync(10).Result;
-			items.Add(new CardStackView.Item() { Name = returnedUser.Name, Photo = returnedUser.Photo, Location = returnedUser.Location, Description = returnedUser.Description });
+			//returnedUser = App.Database.GetItemAsync(1).Result;
+			//items.Add(new CardStackView.Item() { Name = returnedUser.Name, Photo = returnedUser.Photo, Location = returnedUser.Location, Description = returnedUser.Description });
 
-			returnedUser = App.Database.GetItemAsync(11).Result;
-			items.Add(new CardStackView.Item() { Name = returnedUser.Name, Photo = returnedUser.Photo, Location = returnedUser.Location, Description = returnedUser.Description });
+			//returnedUser = App.Database.GetItemAsync(2).Result;
+			//items.Add(new CardStackView.Item() { Name = returnedUser.Name, Photo = returnedUser.Photo, Location = returnedUser.Location, Description = returnedUser.Description });
 
-			returnedUser = App.Database.GetItemAsync(12).Result;
-			items.Add(new CardStackView.Item() { Name = returnedUser.Name, Photo = returnedUser.Photo, Location = returnedUser.Location, Description = returnedUser.Description });
+			//returnedUser = App.Database.GetItemAsync(3).Result;
+			//items.Add(new CardStackView.Item() { Name = returnedUser.Name, Photo = returnedUser.Photo, Location = returnedUser.Location, Description = returnedUser.Description });
 
 			//items.Add(new CardStackView.Item() { Name = "Pizza to go", Photo = "one.jpg", Location = "30 meters away", Description = "Pizza" });
 
 
-			//items.Add(new CardStackView.Item() { Name = "Dragon & Peacock", Photo = "two.jpg", Location = "800 meters away", Description = "Sweet & Sour" });
-			//items.Add(new CardStackView.Item() { Name = "Murrays Food Palace", Photo = "three.jpg", Location = "9 miles away", Description = "Salmon Plate" });
-			//items.Add(new CardStackView.Item() { Name = "Food to go", Photo = "four.jpg", Location = "4 miles away", Description = "Salad Wrap" });
+			items.Add(new CardStackView.Item() { Name = "Dragon & Peacock", Photo = "two.jpg", Location = "800 meters away", Description = "Sweet & Sour" });
+			items.Add(new CardStackView.Item() { Name = "Murrays Food Palace", Photo = "three.jpg", Location = "9 miles away", Description = "Salmon Plate" });
+			items.Add(new CardStackView.Item() { Name = "Food to go", Photo = "four.jpg", Location = "4 miles away", Description = "Salad Wrap" });
 			//items.Add(new CardStackView.Item() { Name = "Mexican Joint", Photo = "five.jpg", Location = "2 miles away", Description = "Chilli Bites" });
 			//items.Add(new CardStackView.Item() { Name = "Mr Bens", Photo = "six.jpg", Location = "1 mile away", Description = "Beef" });
 			//items.Add(new CardStackView.Item() { Name = "Corner Shop", Photo = "seven.jpg", Location = "100 meters away", Description = "Burger & Chips" });

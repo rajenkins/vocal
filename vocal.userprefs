@@ -1,25 +1,18 @@
 ﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/MainPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
     <Files>
-      <File FileName="vocal/IFileHelper.cs" Line="6" Column="3" />
-      <File FileName="vocal/App.cs" Line="13" Column="1" />
-      <File FileName="vocal/Models/EmptyClass.cs" Line="4" Column="15" />
-      <File FileName="vocal/CardView.cs" Line="19" Column="23" />
-      <File FileName="vocal/CardStackView.cs" Line="22" Column="17" />
-      <File FileName="vocal/Models/VocalUser.cs" Line="12" Column="39" />
-      <File FileName="vocal/Data/VocalDatabase.cs" Line="10" Column="15" />
-      <File FileName="vocal/MainPageViewModel.cs" Line="98" Column="1" />
-      <File FileName="vocal/MainPage.cs" Line="22" Column="1" />
+      <File FileName="vocal/App.cs" Line="24" Column="47" />
+      <File FileName="vocal/MainPage.cs" Line="22" Column="21" />
+      <File FileName="vocal/Menu.cs" Line="68" Column="23" />
+      <File FileName="vocal/MainPageViewModel.cs" Line="76" Column="1" />
+      <File FileName="iOS/Main.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/vocal/MainPageViewModel.cs" relfile="vocal/MainPageViewModel.cs" line="76" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.vocal.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B459F545-EA3C-4FF1-9DBE-D0E74D587E4D" />
+  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B9B21759-477D-4A54-AF2E-8274CB7D5729" />
 </Properties>

@@ -21,7 +21,7 @@ namespace vocal
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new MainPage();
+			MainPage = new NavigationPage (new Menu());
 		}
 
 		public static VocalDatabase Database
