@@ -28,7 +28,7 @@ namespace vocal
 				HorizontalOptions = LayoutOptions.Center
 			};
 
-			Button button = new Button
+			Button meetButton = new Button
 			{
 				Text = "Meet",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
@@ -37,8 +37,8 @@ namespace vocal
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				WidthRequest = 200
 			};
-			button.Clicked += OnButtonClicked;
-			Button button1 = new Button
+			meetButton.Clicked += OnMeetButtonClicked;
+			Button chatButton = new Button
 			{
 				Text = "Chat",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
@@ -47,7 +47,9 @@ namespace vocal
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				WidthRequest = 200
 			};
-			Button button2 = new Button
+			chatButton.Clicked += OnChatButtonClicked;
+
+			Button profButton = new Button
 			{
 				Text = "Profile",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
@@ -56,6 +58,7 @@ namespace vocal
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				WidthRequest = 200
 			};
+			profButton.Clicked += OnProfButtonClicked;
 
 			label = new Label
 			{
@@ -73,20 +76,27 @@ namespace vocal
 				Children =
 						{
 							header,
-							button,
-							button1,
-							button2,
+							meetButton,
+							chatButton,
+							profButton,
 							label
 						}
 			};
 		}
 
-		async void OnButtonClicked(object sender, EventArgs e)
+		async void OnMeetButtonClicked(object sender, EventArgs e)
 		{
-			clickTotal += 1;
-			label.Text = String.Format("{0} button click{1}",
-									   clickTotal, clickTotal == 1 ? "" : "s"); 
 			await Navigation.PushAsync(new MainPage());
+		}
+
+		async void OnChatButtonClicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new ChatList());
+		}
+
+		async void OnProfButtonClicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new ProfilePage());
 		}
 	}
 }

@@ -1,16 +1,21 @@
 ﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/ProfilePage.cs">
     <Files>
-      <File FileName="vocal/App.cs" Line="24" Column="47" />
+      <File FileName="vocal/App.cs" Line="20" Column="3" />
       <File FileName="vocal/MainPage.cs" Line="22" Column="21" />
-      <File FileName="vocal/Menu.cs" Line="68" Column="23" />
-      <File FileName="vocal/MainPageViewModel.cs" Line="76" Column="1" />
-      <File FileName="iOS/Main.cs" Line="23" Column="1" />
+      <File FileName="vocal/Menu.cs" Line="103" Column="1" />
+      <File FileName="vocal/MainPageViewModel.cs" Line="89" Column="4" />
+      <File FileName="iOS/Main.cs" Line="28" Column="1" />
+      <File FileName="vocal/ChatList.cs" Line="7" Column="22" />
+      <File FileName="vocal/ChatWindow.cs" Line="30" Column="4" />
+      <File FileName="vocal/ProfilePage.cs" Line="6" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <FunctionBreakpoint line="84" column="1" function="Menu.OnButtonClicked" language="C#" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
