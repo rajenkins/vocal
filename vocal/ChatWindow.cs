@@ -7,10 +7,12 @@ namespace vocal
 	{
 		public ChatWindow()
 		{
+            this.Title = "Chat";
 			this.BackgroundColor = Color.Blue;
 			Label header = new Label
 			{
-				Text = "Chat",
+				Text = "Name of Match",
+				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
 				HorizontalOptions = LayoutOptions.Center
 			};
 

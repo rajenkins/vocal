@@ -6,10 +6,12 @@ namespace vocal
 	public class ChatList : ContentPage
 	{
 		public ChatList() {
+            this.Title = "Matches";
 			this.BackgroundColor = Color.Pink;
 			Label header = new Label
 			{
-				Text = "Chat List",
+				Text = "Select a Match to Message",
+				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
 				HorizontalOptions = LayoutOptions.Center
 			};
 

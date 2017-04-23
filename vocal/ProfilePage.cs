@@ -7,10 +7,12 @@ namespace vocal
 	{
 		public ProfilePage()
 		{
+            this.Title = "Profile";
             this.BackgroundColor = Color.Green;
 			Label header = new Label
 			{
-				Text = "Profile",
+				Text = "Update Profile",
+				FontSize = Device.GetNamedSize (NamedSize.Large, typeof(Label)),
 				HorizontalOptions = LayoutOptions.Center
 			};
 

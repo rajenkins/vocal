@@ -16,17 +16,11 @@ namespace vocal
 {
 	public class Menu : ContentPage
 	{
-		Label label;
-		int clickTotal = 0;
 
 		public Menu()
 		{
+			this.Title = "Menu";
             this.BackgroundColor = Color.White;
-			Label header = new Label
-			{
-				Text = "Button",
-				HorizontalOptions = LayoutOptions.Center
-			};
 
 			Button meetButton = new Button
 			{
@@ -60,13 +54,6 @@ namespace vocal
 			};
 			profButton.Clicked += OnProfButtonClicked;
 
-			label = new Label
-			{
-				Text = "0 button clicks",
-				HorizontalOptions = LayoutOptions.Center,
-				VerticalOptions = LayoutOptions.CenterAndExpand
-			};
-
 			// Accomodate iPhone status bar.
 			this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
@@ -75,11 +62,9 @@ namespace vocal
 			{
 				Children =
 						{
-							header,
 							meetButton,
 							chatButton,
-							profButton,
-							label
+							profButton
 						}
 			};
 		}
