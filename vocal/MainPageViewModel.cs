@@ -17,6 +17,7 @@ namespace vocal
 {
 	public class MainPageViewModel : INotifyPropertyChanged
 	{
+		private Controller controller = new Controller();
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		List<CardStackView.Item> items = new List<CardStackView.Item>();
@@ -67,7 +68,7 @@ namespace vocal
 
 			//addUser = new VocalUser() { Name = "Chase", Photo = "play.jpg", Location = "15 miles away", Description = "Hello" };
 			//App.Database.SaveItemAsync(addUser);
-				
+
 			//addUser = new VocalUser() { Name = "Hassan", Photo = "play.jpg", Location = "2 miles away", Description = "Hi" };
 			//App.Database.SaveItemAsync(addUser);
 
@@ -83,7 +84,7 @@ namespace vocal
 
 			//items.Add(new CardStackView.Item() { Name = "Pizza to go", Photo = "one.jpg", Location = "30 meters away", Description = "Pizza" });
 
-
+			returnedUser = controller.GetUserAsync(1).Result;
 			items.Add(new CardStackView.Item() { Name = "Dragon & Peacock", Photo = "two.jpg", Location = "800 meters away", Description = "Sweet & Sour" });
 			items.Add(new CardStackView.Item() { Name = "Murrays Food Palace", Photo = "three.jpg", Location = "9 miles away", Description = "Salmon Plate" });
 			items.Add(new CardStackView.Item() { Name = "Food to go", Photo = "four.jpg", Location = "4 miles away", Description = "Salad Wrap" });
