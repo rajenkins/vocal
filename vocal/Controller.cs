@@ -18,9 +18,9 @@ namespace vocal
 		public async Task<VocalUser> GetUserAsync(int id)
 		{
 			VocalUser Item = new VocalUser();
-			String RestUrl = "classroom.cs.unc.edu:8000/Users/1";
-			var uri = new Uri(string.Format(RestUrl, string.Empty));
-			  var response = await client.GetAsync(uri);
+			String RestUrl = "https://jsonplaceholder.typicode.com/posts/1";
+			var uri = new Uri(RestUrl);
+			  var response = await client.GetAsync(RestUrl);
 			  if (response.IsSuccessStatusCode) {
 			  	var content = await response.Content.ReadAsStringAsync();
 				Item = JsonConvert.DeserializeObject<VocalUser> (content);  
