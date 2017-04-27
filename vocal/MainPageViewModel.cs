@@ -60,8 +60,8 @@ namespace vocal
 
 		public MainPageViewModel()
 		{
-			VocalUser addUser;
-			VocalUser returnedUser;
+			//VocalUser addUser;
+			//VocalUser returnedUser;
 			//VocalUser user = new VocalUser("Pizza to go","one.jpg","30 meters away","Pizza");
 
 			//addUser = new VocalUser() { Name = "Tommy", Photo = "play.jpg", Location = "30 miles away", Description = "Hey" };
@@ -85,11 +85,10 @@ namespace vocal
 
 			//items.Add(new CardStackView.Item() { Name = "Pizza to go", Photo = "one.jpg", Location = "30 meters away", Description = "Pizza" });
 
-			getData();
-
-			items.Add(new CardStackView.Item() { Name = "Dragon & Peacock", Photo = "two.jpg", Location = "800 meters away", Description = "Sweet & Sour" });
-			items.Add(new CardStackView.Item() { Name = "Murrays Food Palace", Photo = "three.jpg", Location = "9 miles away", Description = "Salmon Plate" });
-			items.Add(new CardStackView.Item() { Name = "Food to go", Photo = "four.jpg", Location = "4 miles away", Description = "Salad Wrap" });
+            getData();
+			items.Add(new CardStackView.Item(new VocalUser() { Name = "Dragon & Peacock", Photo = "two.jpg", Location = "800 meters away", Description = "Sweet & Sour" }));
+			//items.Add(new CardStackView.Item() { Name = "Murrays Food Palace", Photo = "three.jpg", Location = "9 miles away", Description = "Salmon Plate" });
+			//items.Add(new CardStackView.Item() { Name = "Food to go", Photo = "four.jpg", Location = "4 miles away", Description = "Salad Wrap" });
 			//items.Add(new CardStackView.Item() { Name = "Mexican Joint", Photo = "five.jpg", Location = "2 miles away", Description = "Chilli Bites" });
 			//items.Add(new CardStackView.Item() { Name = "Mr Bens", Photo = "six.jpg", Location = "1 mile away", Description = "Beef" });
 			//items.Add(new CardStackView.Item() { Name = "Corner Shop", Photo = "seven.jpg", Location = "100 meters away", Description = "Burger & Chips" });
@@ -101,8 +100,11 @@ namespace vocal
 		async void getData()
 		{
 			var res = await controller.GetUserAsync(1);
+			ItemsList.Add(new CardStackView.Item(res));
+			items[0].Location = "yo";
 			int a = 1;
 			a += 2;
+
 		}
 	}
 }

@@ -23,6 +23,14 @@ namespace vocal
 			public string Photo { get; set;}
 			public string Location { get; set;}
 			public string Description { get; set;}
+
+			public Item(VocalUser user) 
+			{
+				Name = user.Name;
+				Photo = user.Photo;
+				Location = user.Location;
+				Description = user.Description;
+			}
 		};
 	
 	
