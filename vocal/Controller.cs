@@ -17,7 +17,7 @@ namespace vocal
 		}
 		public async Task<VocalUser> GetUserAsync(int id)
 		{
-			var response = await client.GetStringAsync("http://classroom.cs.unc.edu:8000/Users/1");
+var response = await client.GetStringAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/Users/" + id);
 			var todoItems = JsonConvert.DeserializeObject<VocalUser>(response);
 			return todoItems;  
 		}
