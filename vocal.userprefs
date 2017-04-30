@@ -1,19 +1,26 @@
-﻿<Properties StartupConfiguration="{AE2CB176-5809-4147-8A93-B1472FE06298}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/PlayAudioPage.cs">
+﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/SignupPage2.cs">
     <Files>
       <File FileName="vocal/MainPageViewModel.cs" Line="1" Column="1" />
       <File FileName="vocal/Data/VocalDatabase.cs" Line="20" Column="4" />
       <File FileName="vocal/Controller.cs" Line="20" Column="31" />
-      <File FileName="vocal/App.cs" Line="19" Column="33" />
+      <File FileName="vocal/App.cs" Line="20" Column="36" />
       <File FileName="iOS/Main.cs" Line="23" Column="1" />
       <File FileName="vocal/packages.config" Line="1" Column="1" />
-      <File FileName="vocal/MainPage.cs" Line="1" Column="1" />
+      <File FileName="vocal/MainPage.cs" Line="17" Column="24" />
       <File FileName="vocal/PlayAudioPage.cs" Line="50" Column="87" />
-      <File FileName="vocal/Menu.cs" Line="77" Column="19" />
+      <File FileName="vocal/Menu.cs" Line="72" Column="3" />
       <File FileName="iOS/Info.plist" />
+      <File FileName="vocal/Constants.cs" Line="10" Column="1" />
+      <File FileName="vocal/LoginPage.cs" Line="96" Column="5" />
+      <File FileName="vocal/LoginViewModel.cs" Line="1" Column="1" />
+      <File FileName="vocal/SignupPage.cs" Line="52" Column="2" />
+      <File FileName="vocal/Models/UserAccount.cs" Line="8" Column="39" />
+      <File FileName="vocal/Models/VocalUser.cs" Line="15" Column="2" />
+      <File FileName="vocal/SignupPage2.cs" Line="7" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ActiveRuntime="Mono 4.8.1 (22a39d7)" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <FunctionBreakpoint line="84" column="1" function="Menu.OnButtonClicked" language="C#" />
@@ -22,5 +29,5 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.vocal.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E2BF67E3-95A1-4914-85D0-21E46268FC44" />
+  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B9B21759-477D-4A54-AF2E-8274CB7D5729" />
 </Properties>

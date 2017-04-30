@@ -16,15 +16,20 @@ namespace vocal
 	public class App : Application
 	{
 
-		static VocalDatabase database;
+	//	static VocalDatabase database;
+		public static bool IsUserLoggedIn { get; set; }
 
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new NavigationPage (new Menu());
+			if (!IsUserLoggedIn) {
+				MainPage = new NavigationPage(new LoginPage());
+			} else {
+				MainPage = new NavigationPage(new Menu());
+}
+
 		}
 
-		public static VocalDatabase Database
+	/*	public static VocalDatabase Database
 		{
 			get
 			{
@@ -35,6 +40,7 @@ namespace vocal
 				return database;
 			}
 		}
+		*/
 
 		protected override void OnStart ()
 		{
