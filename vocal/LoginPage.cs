@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace vocal
 {
@@ -8,6 +9,7 @@ namespace vocal
 		Entry usernameEntry;
 		Entry passwordEntry;
 		Label messageLabel;
+		private Controller controller = new Controller();
 
 		public LoginPage()
 		{
@@ -75,7 +77,7 @@ namespace vocal
 				password = passwordEntry.Text
 			};
 
-			var isValid = AreCredentialsCorrect(user);
+			var isValid = await AreCredentialsCorrect(user);
 			if (isValid)
 			{
 				App.IsUserLoggedIn = true;
@@ -89,9 +91,17 @@ namespace vocal
 			}
 		}
 
-		bool AreCredentialsCorrect(UserAccount user)
+		async Task<bool> AreCredentialsCorrect(UserAccount user)
 		{
-			return user.username == Constants.Username && user.password == Constants.Password;
+			var isSuccess = await controller.Login(user);
+			if (isSuccess)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}	
 	}
 }

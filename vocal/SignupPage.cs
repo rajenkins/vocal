@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace vocal
 {
@@ -7,6 +8,7 @@ namespace vocal
 	{
 		Entry usernameEntry;
 		Label messageLabel;
+		private Controller controller = new Controller();
 
 		public SignupPage()
 		{
@@ -41,15 +43,15 @@ namespace vocal
 
 		async void SubmitName(object sender, EventArgs e)
 		{
+			messageLabel.Text = "Checking username availability";
 			var user = new UserAccount
 			{
 				username = usernameEntry.Text,
 			};
 
-			var isValid = CheckNameAvail(user);
+			var isValid = await CheckNameAvail(user);
 			if (isValid)
 			{
-				Navigation.InsertPageBefore(new Menu(), this);
 				await Navigation.PushAsync(new SignupPage2(user));
 			}
 			else
@@ -58,10 +60,17 @@ namespace vocal
 			}
 		}
 
-		bool CheckNameAvail(UserAccount user)
+		async Task<bool> CheckNameAvail(UserAccount user)
 		{
-			return user.username != Constants.Username;
-
+			if (user.username.Length > 0)
+			{
+				var doesNameExist = await controller.doesNameExist(user.username);
+				return !doesNameExist;
+			}
+			else
+			{
+				return false;
+			}
 		}
 	}
 }
