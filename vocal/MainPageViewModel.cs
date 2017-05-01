@@ -85,10 +85,6 @@ namespace vocal
 			//items.Add(new CardStackView.Item() { Name = returnedUser.Name, Photo = returnedUser.Photo, Location = returnedUser.Location, Description = returnedUser.Description });
 
 			//items.Add(new CardStackView.Item() { Name = "Pizza to go", Photo = "one.jpg", Location = "30 meters away", Description = "Pizza" });
-
-            getData("Beth");
-            getData("Ryan");
-            getData("Paul");
 			//items.Add(new CardStackView.Item(new VocalUser() { Name = "Dragon & Peacock", Photo = "two.jpg", Location = "800 meters away", Description = "Sweet & Sour" }));
 			//items.Add(new CardStackView.Item() { Name = "Murrays Food Palace", Photo = "three.jpg", Location = "9 miles away", Description = "Salmon Plate" });
 			//items.Add(new CardStackView.Item() { Name = "Food to go", Photo = "four.jpg", Location = "4 miles away", Description = "Salad Wrap" });
@@ -100,12 +96,7 @@ namespace vocal
 			//items.Add(new CardStackView.Item() { Name = "Jerrys", Photo = "ten.jpg", Location = "8 miles away", Description = "Pasta Salad" });
 
 		}
-		async void getData(String u)
-		{
-			var res = await controller.GetUserAsync(u);
-			ItemsList.Add(new CardStackView.Item(res));
 
-		}
 	}
 }
 

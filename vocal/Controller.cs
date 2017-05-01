@@ -47,7 +47,6 @@ namespace vocal
 				if (result.IsSuccessStatusCode)
 				{
 					App.username = user.username;
-					GetPotentialMatches( user.username);
 					return true;
 				}
 				return false;
@@ -96,7 +95,6 @@ namespace vocal
 					if (success)
 					{
 						App.username = user.username;
-						GetPotentialMatches(user.username);
 						return true;
 					}
 					return false;
@@ -114,12 +112,12 @@ namespace vocal
 			ResponseList matches = JsonConvert.DeserializeObject<ResponseList>(response);
 			return matches.data;
 		}
-		private async void GetPotentialMatches(String u)
+		public async Task<List<String>> GetPotentialMatches(String u)
 		{
 			var response = await client.GetStringAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/Users/queue/" + u);
 			ResponseList matches = JsonConvert.DeserializeObject<ResponseList>(response);
 			App.newUsers = matches.data;
-			return;
+			return matches.data;
 		}
 	}
 }

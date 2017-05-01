@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace vocal
@@ -100,18 +101,23 @@ namespace vocal
 								}
 				 };
 		}
-		async void PopulateInfo()
+		async Task<VocalUser> PopulateInfo()
 		{
 			VocalUser user = await controller.GetUserAsync(App.username);
 			uName = user.Name;
 			uAge = user.Age.ToString();
 			name.Text = uName;
 			age.Text = uAge;
+			return user;
 		}
 
 		async void showUpdateBasicPage(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new UpdateBasicPage(uName, uAge, controller));
+		}
+		async void OnAppearing(object sender, EventArgs args)
+		{
+			await PopulateInfo();
 		}
 	}
 }

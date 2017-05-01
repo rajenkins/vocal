@@ -48,7 +48,8 @@ namespace vocal
 		}
 		async void updateNameAge(object sender, EventArgs e)
 		{
-			controller.UpdateNameAge(nameEntry.Text, ageEntry.Text);
+			await controller.UpdateNameAge(nameEntry.Text, ageEntry.Text);
+			await Navigation.PopAsync();
 		}
 	}
 }

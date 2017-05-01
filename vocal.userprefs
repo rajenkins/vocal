@@ -7,22 +7,21 @@
       <File FileName="vocal/LoginPage.cs" Line="83" Column="9" />
       <File FileName="vocal/Models/UserAccount.cs" Line="7" Column="39" />
       <File FileName="vocal/Models/VocalUser.cs" Line="15" Column="3" />
-      <File FileName="vocal/ProfilePage.cs" Line="15" Column="4" />
+      <File FileName="vocal/ProfilePage.cs" Line="8" Column="16" />
       <File FileName="vocal/CardView.cs" Line="1" Column="1" />
-      <File FileName="vocal/CardStackView.cs" Line="295" Column="1" />
+      <File FileName="vocal/CardStackView.cs" Line="291" Column="8" />
       <File FileName="vocal/Update Pages/UpdateBasicPage.cs" Line="37" Column="34" />
-      <File FileName="vocal/MainPage.cs" Line="68" Column="8" />
-      <File FileName="vocal/ChatList.cs" Line="41" Column="17" />
+      <File FileName="vocal/MainPage.cs" Line="32" Column="19" />
       <File FileName="vocal/App.cs" Line="24" Column="60" />
-      <File FileName="vocal/Controller.cs" Line="117" Column="16" />
-      <File FileName="iOS/Main.cs" Line="23" Column="1" />
+      <File FileName="vocal/Controller.cs" Line="119" Column="1" />
+      <File FileName="iOS/Main.cs" Line="27" Column="1" />
+      <File FileName="vocal/MainPageViewModel.cs" Line="99" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <FunctionBreakpoint line="84" column="1" function="Menu.OnButtonClicked" language="C#" />
-      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/MainPageViewModel.cs" relfile="vocal/MainPageViewModel.cs" line="39" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

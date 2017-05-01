@@ -12,6 +12,7 @@
 using System;
 using Xamarin.Forms;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace vocal
 {
@@ -288,13 +289,15 @@ namespace vocal
 		{			
 			return (index == topCardIndex) ? 1.0f : BackCardScale;
 		}
-		async void loadNextCard()
+		public async Task<VocalUser> loadNextCard()
 		{
 			int len = App.newUsers.Count;
 			int r = App.rnd.Next(len);
 			String nextUser = App.newUsers[r];
+			App.newUsers.RemoveAt(r);
 			var res = await controller.GetUserAsync(nextUser);
 			ItemsSource.Add(new CardStackView.Item(res));
+			return res;
 		}
 	}
 }

@@ -10,6 +10,7 @@
 //  IN THE SOFTWARE.
 //
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace vocal
@@ -29,7 +30,7 @@ namespace vocal
 
 			cardStack = new CardStackView ();
 			cardStack.SetBinding(CardStackView.ItemsSourceProperty, "ItemsList");
-			getData("Beth", cardStack);
+			getData("Beth",cardStack);
 			cardStack.SwipedLeft += SwipedLeft;
 			cardStack.SwipedRight += SwipedRight;
 
@@ -63,12 +64,11 @@ namespace vocal
 		}
 		async void getData(String u, CardStackView csv)
 		{
-			var res = await controller.GetUserAsync(u);
-			viewModel.ItemsList.Add(new CardStackView.Item(res));
+			await controller.GetPotentialMatches(App.username);
+			await csv.loadNextCard();
+			await csv.loadNextCard();
+			await csv.loadNextCard();
 			csv.Setup();
 		}
-
 	}
 }
-
-
