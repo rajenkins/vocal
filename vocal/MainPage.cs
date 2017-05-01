@@ -18,6 +18,7 @@ namespace vocal
 	{				
 		CardStackView cardStack;
 		MainPageViewModel viewModel = new MainPageViewModel();
+		private Controller controller = new Controller();
 	
 		public MainPage ()
 		{
@@ -28,6 +29,7 @@ namespace vocal
 
 			cardStack = new CardStackView ();
 			cardStack.SetBinding(CardStackView.ItemsSourceProperty, "ItemsList");
+			getData("Beth", cardStack);
 			cardStack.SwipedLeft += SwipedLeft;
 			cardStack.SwipedRight += SwipedRight;
 
@@ -58,7 +60,14 @@ namespace vocal
 		void SwipedRight(int index)
 		{
 			// card swiped to the right
-		}	
+		}
+		async void getData(String u, CardStackView csv)
+		{
+			var res = await controller.GetUserAsync(u);
+			viewModel.ItemsList.Add(new CardStackView.Item(res));
+			csv.Setup();
+		}
+
 	}
 }
 

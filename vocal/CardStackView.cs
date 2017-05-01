@@ -17,6 +17,7 @@ namespace vocal
 {
 	public class CardStackView : ContentView
 	{
+		private Controller controller = new Controller();
 		public class Item
 		{
 			public string Name { get; set;}
@@ -26,7 +27,14 @@ namespace vocal
 
 			public Item(VocalUser user) 
 			{
-				Name = user.Name;
+				if (user.Name != null)
+				{
+					Name = user.Name;
+				}
+				else
+				{
+					Name = user.Username;
+				}
 				Photo = user.Photo;
 				Location = user.Location;
 				Description = user.Description;
@@ -74,7 +82,7 @@ namespace vocal
 			}
 		}
 		
-		private static void OnItemsSourcePropertyChanged(BindableObject bindable, object oldValue, object newValue)
+		private async static void OnItemsSourcePropertyChanged(BindableObject bindable, object oldValue, object newValue)
 		{
 			((CardStackView)bindable).Setup();
 		}
@@ -114,10 +122,11 @@ namespace vocal
 
 		}
 		
-		void Setup()
+		public void Setup()
 		{
 			// set the top card
 			topCardIndex = 0;
+			int count = 0;
 			// create a stack of cards
 			for (int i = 0; i < Math.Min(NumCards, ItemsSource.Count); i++)	{
 				if (itemIndex >= ItemsSource.Count) break;
@@ -202,10 +211,12 @@ namespace vocal
 				
 				if (SwipedRight != null && cardDistance > 0) {
 					SwipedRight(itemIndex);
+					loadNextCard();
 				}
 				else if (SwipedLeft != null)
 				{
 					SwipedLeft(itemIndex);
+                    loadNextCard();
 				}
 
 				// show the next card
@@ -277,7 +288,15 @@ namespace vocal
 		float GetScale(int index) 
 		{			
 			return (index == topCardIndex) ? 1.0f : BackCardScale;
-		}			
+		}
+		async void loadNextCard()
+		{
+			int len = App.newUsers.Count;
+			int r = App.rnd.Next(len);
+			String nextUser = App.newUsers[r];
+			var res = await controller.GetUserAsync(nextUser);
+			ItemsSource.Add(new CardStackView.Item(res));
+		}
 	}
 }
 

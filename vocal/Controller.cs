@@ -17,9 +17,9 @@ namespace vocal
 			client.MaxResponseContentBufferSize = 256000;
 			
 		}
-		public async Task<VocalUser> GetUserAsync(int id)
+		public async Task<VocalUser> GetUserAsync(String u)
 		{
-			var response = await client.GetStringAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/Users/" + id);
+			var response = await client.GetStringAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/Users/" + u);
 			var user = JsonConvert.DeserializeObject<VocalUser>(response);
 			return user;  
 		}

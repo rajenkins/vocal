@@ -10,6 +10,7 @@
 //  IN THE SOFTWARE.
 //
 using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace vocal
@@ -20,6 +21,12 @@ namespace vocal
 		//	static VocalDatabase database;
 		public static String username { get; set; }
 		public static bool IsUserLoggedIn { get; set; }
+		public static List<String> newUsers = new List<String>()    {
+            "Bob",
+            "Sarah",
+            "Larry"
+        };
+		public static Random rnd = new Random();
 
 		public App ()
 		{
