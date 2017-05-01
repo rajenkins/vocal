@@ -57,6 +57,27 @@ namespace vocal
 			}
 		}
 
+		public async Task<bool> UpdateNameAge(String name, String age)
+		{
+			var contentList = new List<KeyValuePair<string, string>>();
+			if (name != null && name.Length > 0)
+			{
+				contentList.Add(new KeyValuePair<string, string>("name", name));
+			}
+			if (age != null && age.Length > 0)
+			{
+				contentList.Add(new KeyValuePair<string, string>("age", age));
+			}
+			contentList.Add(new KeyValuePair<string, string>("username", App.username));
+			var content = new FormUrlEncodedContent(contentList);
+			var result = await client.PostAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/Users/update", content);
+			if (result.IsSuccessStatusCode)
+			{
+				return true;
+			}
+			return false;
+		}
+
 		public async Task<bool> Login(UserAccount user)
 		{
 			if ((user.username.Length > 0) && (user.password.Length > 0))

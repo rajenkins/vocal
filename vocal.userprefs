@@ -1,30 +1,26 @@
 ﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/CardStackView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
     <Files>
-      <File FileName="vocal/MainPageViewModel.cs" Line="106" Column="1" />
-      <File FileName="vocal/Controller.cs" Line="22" Column="1" />
-      <File FileName="vocal/App.cs" Line="27" Column="19" />
-      <File FileName="iOS/Main.cs" Line="23" Column="1" />
-      <File FileName="vocal/MainPage.cs" Line="8" Column="93" />
       <File FileName="vocal/Menu.cs" Line="72" Column="3" />
       <File FileName="iOS/Info.plist" />
       <File FileName="vocal/Constants.cs" Line="10" Column="1" />
-      <File FileName="vocal/LoginPage.cs" Line="80" Column="24" />
+      <File FileName="vocal/LoginPage.cs" Line="94" Column="30" />
       <File FileName="vocal/Models/UserAccount.cs" Line="8" Column="39" />
-      <File FileName="vocal/Models/VocalUser.cs" Line="10" Column="16" />
-      <File FileName="vocal/Data/VocalDatabase.cs" Line="20" Column="4" />
-      <File FileName="vocal/CardStackView.cs" Line="53" Column="25" />
+      <File FileName="vocal/Models/VocalUser.cs" Line="15" Column="31" />
+      <File FileName="vocal/ProfilePage.cs" Line="114" Column="74" />
+      <File FileName="vocal/CardView.cs" Line="1" Column="1" />
+      <File FileName="vocal/CardStackView.cs" Line="42" Column="5" />
+      <File FileName="vocal/Update Pages/UpdateBasicPage.cs" Line="49" Column="20" />
+      <File FileName="vocal/MainPage.cs" Line="68" Column="8" />
+      <File FileName="vocal/Controller.cs" Line="60" Column="31" />
+      <File FileName="iOS/Main.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <FunctionBreakpoint line="84" column="1" function="Menu.OnButtonClicked" language="C#" />
-      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/CardStackView.cs" relfile="vocal/CardStackView.cs" line="248" column="1" />
-      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/CardStackView.cs" relfile="vocal/CardStackView.cs" line="247" column="1" />
-      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/MainPageViewModel.cs" relfile="vocal/MainPageViewModel.cs" line="106" column="1" />
-      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/CardStackView.cs" relfile="vocal/CardStackView.cs" line="87" column="35" />
-      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/CardStackView.cs" relfile="vocal/CardStackView.cs" line="128" column="1" />
+      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/MainPageViewModel.cs" relfile="vocal/MainPageViewModel.cs" line="39" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

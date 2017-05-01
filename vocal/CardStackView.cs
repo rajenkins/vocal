@@ -126,7 +126,6 @@ namespace vocal
 		{
 			// set the top card
 			topCardIndex = 0;
-			int count = 0;
 			// create a stack of cards
 			for (int i = 0; i < Math.Min(NumCards, ItemsSource.Count); i++)	{
 				if (itemIndex >= ItemsSource.Count) break;
