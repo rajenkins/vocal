@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace vocal
 {
 	public class ChatList : ContentPage
 	{
+		private Controller controller = new Controller();
+
 		public ChatList() {
             this.Title = "Matches";
 			this.BackgroundColor = Color.Pink;
@@ -31,19 +34,32 @@ namespace vocal
 			this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);
 
 			// Build the page.
-			this.Content = new StackLayout
+			StackLayout parent = new StackLayout
 			{
 				Children =
 								{
 									header,
-									matchButton
 								}
 			};
+			this.Content = parent;
+			AddMatches(parent);
 		}
 
 		async void OnMatchButtonClicked(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new ChatWindow());
+		}
+		async void AddMatches(StackLayout page)
+		{
+			List<String> matches = await controller.GetMatchesAsync(App.username);
+			foreach (var m in matches) 
+			{
+				Label match = new Label
+				{
+					Text = m
+				};
+				page.Children.Add(match);
+			}
 		}
 	}
 }

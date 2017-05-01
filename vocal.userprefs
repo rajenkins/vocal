@@ -1,18 +1,20 @@
 ﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/CardStackView.cs">
     <Files>
-      <File FileName="vocal/Menu.cs" Line="72" Column="3" />
+      <File FileName="vocal/Menu.cs" Line="77" Column="57" />
       <File FileName="iOS/Info.plist" />
       <File FileName="vocal/Constants.cs" Line="10" Column="1" />
-      <File FileName="vocal/LoginPage.cs" Line="94" Column="30" />
-      <File FileName="vocal/Models/UserAccount.cs" Line="8" Column="39" />
-      <File FileName="vocal/Models/VocalUser.cs" Line="15" Column="31" />
-      <File FileName="vocal/ProfilePage.cs" Line="114" Column="74" />
+      <File FileName="vocal/LoginPage.cs" Line="83" Column="9" />
+      <File FileName="vocal/Models/UserAccount.cs" Line="7" Column="39" />
+      <File FileName="vocal/Models/VocalUser.cs" Line="15" Column="3" />
+      <File FileName="vocal/ProfilePage.cs" Line="15" Column="4" />
       <File FileName="vocal/CardView.cs" Line="1" Column="1" />
-      <File FileName="vocal/CardStackView.cs" Line="42" Column="5" />
-      <File FileName="vocal/Update Pages/UpdateBasicPage.cs" Line="49" Column="20" />
+      <File FileName="vocal/CardStackView.cs" Line="295" Column="1" />
+      <File FileName="vocal/Update Pages/UpdateBasicPage.cs" Line="37" Column="34" />
       <File FileName="vocal/MainPage.cs" Line="68" Column="8" />
-      <File FileName="vocal/Controller.cs" Line="60" Column="31" />
+      <File FileName="vocal/ChatList.cs" Line="41" Column="17" />
+      <File FileName="vocal/App.cs" Line="24" Column="60" />
+      <File FileName="vocal/Controller.cs" Line="117" Column="16" />
       <File FileName="iOS/Main.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

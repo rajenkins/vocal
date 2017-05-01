@@ -76,7 +76,7 @@ namespace vocal
 
 		async void OnChatButtonClicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new PlayAudioPage());
+			await Navigation.PushAsync(new ChatList());
 		}
 
 		async void OnProfButtonClicked(object sender, EventArgs e)
