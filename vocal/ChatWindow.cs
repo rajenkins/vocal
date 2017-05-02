@@ -8,7 +8,6 @@ namespace vocal
 		public ChatWindow()
 		{
             this.Title = "Chat";
-			this.BackgroundColor = Color.Blue;
 			Label header = new Label
 			{
 				Text = "Name of Match",

@@ -19,7 +19,6 @@ namespace vocal
 {
 	public class MainPageViewModel : INotifyPropertyChanged
 	{
-		private Controller controller = new Controller();
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		List<CardStackView.Item> items = new List<CardStackView.Item>();

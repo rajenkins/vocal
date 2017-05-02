@@ -1,37 +1,28 @@
 ﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/RecordAudioPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vocal Status">
     <Files>
-      <File FileName="vocal/IRecordAudio.cs" Line="5" Column="16" />
-      <File FileName="vocal/PlayAudioPage.cs" Line="50" Column="129" />
-      <File FileName="vocal/RecordAudioPage.cs" Line="50" Column="41" />
-      <File FileName="vocal/RecordAudioPageBackup.cs" Line="16" Column="33" />
-      <File FileName="vocal/Menu.cs" Line="77" Column="2" />
-      <File FileName="iOS/RecordAudioImpl.cs" Line="74" Column="1" />
-      <File FileName="iOS/Main.cs" Line="23" Column="34" />
-      <File FileName="Droid/RecordAudioImpl.cs" Line="22" Column="5" />
-      <File FileName="iOS/FileHelper.cs" Line="1" Column="1" />
-      <File FileName="iOS/Entitlements.plist" />
-      <File FileName="vocal/packages.config" Line="1" Column="1" />
-      <File FileName="vocal/SignupPage2.cs" Line="1" Column="1" />
-      <File FileName="vocal/ProfilePage.cs" Line="1" Column="1" />
-      <File FileName="vocal/IFileHelper.cs" Line="1" Column="1" />
+      <File FileName="vocal/Menu.cs" Line="27" Column="46" />
+      <File FileName="vocal/Constants.cs" Line="10" Column="1" />
+      <File FileName="vocal/LoginPage.cs" Line="19" Column="4" />
+      <File FileName="../../../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/10.8.0.175/lib/msbuild/iOS/Xamarin.iOS.Common.targets" Line="12" Column="1" />
+      <File FileName="vocal/UserProfile.cs" Line="1" Column="1" />
+      <File FileName="vocal/ChatList.cs" Line="13" Column="27" />
+      <File FileName="vocal/ChatWindow.cs" Line="10" Column="33" />
+      <File FileName="iOS/Resources/LaunchScreen.xib" />
+      <File FileName="vocal/MainPage.cs" Line="27" Column="19" />
+      <File FileName="vocal/ProfilePage.cs" Line="33" Column="5" />
+      <File FileName="vocal/SignupPage.cs" Line="54" Column="6" />
+      <File FileName="vocal/SignupPage2.cs" Line="55" Column="12" />
+      <File FileName="vocal Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" ActiveRuntime="Mono 4.8.1 (22a39d7)" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <FunctionBreakpoint line="84" column="1" function="Menu.OnButtonClicked" language="C#" />
-      <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/RecordAudioImpl.cs" relfile="iOS/RecordAudioImpl.cs" line="69" column="1" />
-      <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/RecordAudioImpl.cs" relfile="iOS/RecordAudioImpl.cs" line="64" column="1" />
-      <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/RecordAudioImpl.cs" relfile="iOS/RecordAudioImpl.cs" line="36" column="1" />
-      <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/RecordAudioImpl.cs" relfile="iOS/RecordAudioImpl.cs" line="37" column="1" />
-      <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/RecordAudioImpl.cs" relfile="iOS/RecordAudioImpl.cs" line="39" column="1" />
-      <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/RecordAudioImpl.cs" relfile="iOS/RecordAudioImpl.cs" line="41" column="1" />
-      <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/iOS/RecordAudioImpl.cs" relfile="iOS/RecordAudioImpl.cs" line="74" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.vocal.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.d77888cca25efa985a0f877892fb279a35306fc9" />
+  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B9B21759-477D-4A54-AF2E-8274CB7D5729" />
 </Properties>

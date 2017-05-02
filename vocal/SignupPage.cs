@@ -13,8 +13,11 @@ namespace vocal
 		public SignupPage()
 		{
             this.Title = "Username";
-            this.BackgroundColor = Color.White;
-
+			Label usernameLabel = new Label
+			{
+				Text = "Username:",
+				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+			};
 			usernameEntry = new Entry { Placeholder = "Username" };
 
 			messageLabel = new Label();
@@ -34,6 +37,7 @@ namespace vocal
 			{
 				Children =
 				{
+					usernameLabel,
 					usernameEntry,
 					messageLabel,
 					nameSubmit

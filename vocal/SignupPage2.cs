@@ -13,8 +13,12 @@ namespace vocal
 		{
 			this.user = user;
 			this.Title = "Password";
-            this.BackgroundColor = Color.White;
 
+			Label passwordLabel = new Label
+			{
+				Text = "Password:",
+				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+			};
 			passwordEntry = new Entry { Placeholder = "Password", IsPassword=true };
 
 			messageLabel = new Label();
@@ -34,6 +38,7 @@ namespace vocal
 				 {
 					 Children =
 				{
+					passwordLabel,
 					passwordEntry,
 					messageLabel,
 					pwdSubmit
@@ -44,6 +49,11 @@ namespace vocal
 		{
 			messageLabel.Text = "Creating Account...";
 			user.password = passwordEntry.Text;
+			if (user.password == null || user.password == "")
+			{
+				messageLabel.Text = "Please enter password";
+				return;
+			}
 
 			var isSuccess = await controller.AddUser(user);
 			if (isSuccess)

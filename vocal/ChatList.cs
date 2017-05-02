@@ -10,7 +10,6 @@ namespace vocal
 
 		public ChatList() {
             this.Title = "Matches";
-			this.BackgroundColor = Color.Pink;
 			Label header = new Label
 			{
 				Text = "Select a Match to Message",

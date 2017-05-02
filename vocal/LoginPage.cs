@@ -14,12 +14,19 @@ namespace vocal
 		public LoginPage()
 		{
             this.Title = "Login";
-            this.BackgroundColor = Color.White;
 
 
-
+			Label usernameLabel = new Label
+			{
+				Text = "Username:",
+				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+			};
 			usernameEntry = new Entry { Placeholder = "Username" };
-
+			Label passwordLabel = new Label
+			{
+				Text = "Password:",
+				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
+			};
 			passwordEntry = new Entry { Placeholder = "Password", IsPassword = true };
 
 			messageLabel = new Label();
@@ -53,16 +60,18 @@ namespace vocal
 
 			// Build the page.
 			this.Content = new StackLayout
-				 {
-					 Children =
-						{
-							usernameEntry,
-							passwordEntry,
-							messageLabel,
-					        loginButton,
-					        signupButton
-						}
-				 };
+			{
+				Children =
+				{
+					usernameLabel,
+					usernameEntry,
+					passwordLabel,
+					passwordEntry,
+					messageLabel,
+					loginButton,
+					signupButton
+				}
+			};
 		}
 		async void signup(object sender, EventArgs e)
 		{
@@ -71,6 +80,15 @@ namespace vocal
 
 		async void login(object sender, EventArgs e)
 		{
+			if (usernameEntry.Text == null || usernameEntry.Text == "")
+			{
+				messageLabel.Text = "Please enter username";
+				return;
+			}
+			if (passwordEntry.Text == null || passwordEntry.Text == "")
+			{
+				messageLabel.Text = "Please enter password";
+			}
 			var user = new UserAccount
 			{
 				username = usernameEntry.Text,

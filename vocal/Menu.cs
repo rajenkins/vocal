@@ -20,7 +20,6 @@ namespace vocal
 		public Menu()
 		{
 			this.Title = "Menu";
-            this.BackgroundColor = Color.White;
 
 			Button meetButton = new Button
 			{

@@ -15,7 +15,6 @@ namespace vocal
 		{
 			PopulateInfo();
             this.Title = "Profile";
-			this.BackgroundColor = Color.White;
 			Label header = new Label
 			{
 				Text = "Update Profile",
