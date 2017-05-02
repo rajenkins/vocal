@@ -47,7 +47,7 @@ namespace vocal
 
 		async void OnMatchButtonClicked(object sender, EventArgs e)
 		{
-await CrossMediaManager.Current.Play("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/files/sounds/therecordertest.mp3");
+			await CrossMediaManager.Current.Play("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/files/sounds/therecordertest.mp3");
 		}
 	}
 }

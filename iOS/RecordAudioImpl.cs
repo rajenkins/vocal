@@ -13,7 +13,7 @@ namespace vocal.iOS
 	public class RecordAudioImpl : IRecordAudio
 	{
 		AVAudioRecorder recorder; NSError error; NSUrl url; NSDictionary settings;
-
+		string audioFilePath;
 		public RecordAudioImpl() { }
 
 		public void SetupRecord()
@@ -34,7 +34,7 @@ namespace vocal.iOS
 			}
 			//Declare string for application temp path and tack on the file extension 
 			string fileName = string.Format("Myfile{0}.wav", DateTime.Now.ToString("yyyyMMddHHmmss"));
-			string audioFilePath = Path.Combine(Path.GetTempPath(), fileName);
+			audioFilePath = Path.Combine(Path.GetTempPath(), fileName);
 
 			Console.WriteLine("Audio File Path: " + audioFilePath);
 
@@ -69,9 +69,10 @@ namespace vocal.iOS
 			recorder.Record();
 		}
 
-		public void Stop()
+		public string Stop()
 		{
 			recorder.Stop();
+			return audioFilePath;
 		}
 	}
 }

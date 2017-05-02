@@ -8,7 +8,9 @@ namespace vocal
 {
 	public class RecordAudioPage : ContentPage
 	{
-		
+		public IPlaybackController PlaybackController => CrossMediaManager.Current.PlaybackController;
+		public Controller controller = new Controller();
+
 		public RecordAudioPage()
 		{
 			this.Title = "Record Audio";
@@ -32,22 +34,25 @@ namespace vocal
 		matchButton.Clicked += (sender, e) =>
 			{
 				Get<IRecordAudio>().SetupRecord();
-				Get<IRecordAudio>().Record();
-			};
+		Get<IRecordAudio>().Record();
+	};
 
-		Button matchButton2 = new Button
-		{
-			Text = "STOP RECORDING",
-			Font = Font.SystemFontOfSize(NamedSize.Large),
-			BorderWidth = 2,
-			HorizontalOptions = LayoutOptions.Center,
-			VerticalOptions = LayoutOptions.CenterAndExpand,
-			WidthRequest = 200
-		};
-		matchButton2.Clicked += (sender, e) =>
+	Button matchButton2 = new Button
+	{
+		Text = "STOP RECORDING",
+		Font = Font.SystemFontOfSize(NamedSize.Large),
+		BorderWidth = 2,
+		HorizontalOptions = LayoutOptions.Center,
+		VerticalOptions = LayoutOptions.CenterAndExpand,
+		WidthRequest = 200
+	};
+	matchButton2.Clicked += (sender, e) =>
 			{
-				Get<IRecordAudio>().Stop();
-			};
+				string audioFile = Get<IRecordAudio>().Stop();
+				controller.SaveAudio(audioFile);
+				//CrossMediaManager.Current.Play(audioFile);
+
+};
 
 
 			// Accomodate iPhone status bar.
@@ -55,19 +60,14 @@ namespace vocal
 
 			// Build the page.
 			this.Content = new StackLayout
-			{
-				Children =
+				 {
+					 Children =
 								{
 									header,
 									matchButton,
 									matchButton2
 								}
-			};
-		}
-
-		async void OnMatchButton2Clicked(object sender, EventArgs e)
-		{
-			await CrossMediaManager.Current.Play("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/files/sounds/therecordertest.mp3");
+				 };
 		}
 	}
 }

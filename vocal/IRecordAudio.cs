@@ -4,5 +4,5 @@
 
 	void Record();
 
-	void Stop();
+	string Stop();
 }
