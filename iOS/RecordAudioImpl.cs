@@ -3,6 +3,7 @@ using AVFoundation;
 using Foundation;
 using System;
 using System.IO;
+using System.Net.Http;
 
 [assembly: Xamarin.Forms.Dependency(typeof(RecordAudioImpl))]
 namespace vocal.iOS
@@ -74,5 +75,14 @@ namespace vocal.iOS
 			recorder.Stop();
 			return audioFilePath;
 		}
+		public StreamContent Stop2() 
+		{
+			recorder.Stop();
+			var content = new MultipartFormDataContent();
+			var fileStream = new FileStream(audioFilePath, FileMode.Open, FileAccess.Read);
+			var stream = new StreamContent(fileStream);
+			return stream;
+		}
+
 	}
 }

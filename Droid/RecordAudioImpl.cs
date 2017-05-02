@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 using vocal.Droid;
+using System.Net.Http;
 
 [assembly: Xamarin.Forms.Dependency(typeof(RecordAudioImpl))]
 namespace vocal.Droid
@@ -24,7 +25,11 @@ namespace vocal.Droid
 		public string Stop()
 		{
 			return "";
-		}	
+		}
+		public StreamContent Stop2()
+		{
+			return new StreamContent("");
+		}
 
 	}
 }

@@ -4,6 +4,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.IO;
 
 namespace vocal
 {
@@ -150,5 +151,15 @@ namespace vocal
 			}
 			return false;
 		}
+		public async Task<bool> SaveAuio(StreamContent stream)
+		{
+			var content = new MultipartFormDataContent();
+			content.Add(stream, "upload", "upload.wav");
+			content.Add(new StringContent(App.username), "username");
+            content.Add(new StringContent("cat1"), "category");
+			var result = await client.PostAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/upload", content);
+			return false;
+		}
+
 	}
 }

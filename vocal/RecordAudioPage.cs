@@ -3,6 +3,8 @@ using Xamarin.Forms;
 using Plugin.MediaManager;
 using Plugin.MediaManager.Abstractions;
 using static Xamarin.Forms.DependencyService;
+using System.Net.Http;
+using System.IO;
 
 namespace vocal
 {
@@ -48,11 +50,11 @@ namespace vocal
 	};
 	matchButton2.Clicked += (sender, e) =>
 			{
-				string audioFile = Get<IRecordAudio>().Stop();
-				controller.SaveAudio(audioFile);
+				StreamContent audioFile = Get<IRecordAudio>().Stop2();
+				controller.SaveAuio(audioFile);
 				//CrossMediaManager.Current.Play(audioFile);
 
-};
+		};
 
 
 			// Accomodate iPhone status bar.
