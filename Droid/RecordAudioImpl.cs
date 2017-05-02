@@ -21,9 +21,9 @@ namespace vocal.Droid
 		
 		}	
 
-		public void Stop()
-		{	
-		
+		public string Stop()
+		{
+			return "";
 		}	
 
 	}
