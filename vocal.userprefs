@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="vocal Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/Menu.cs">
     <Files>
       <File FileName="vocal/Menu.cs" Line="27" Column="46" />
       <File FileName="vocal/Constants.cs" Line="10" Column="1" />
@@ -13,7 +13,6 @@
       <File FileName="vocal/ProfilePage.cs" Line="33" Column="5" />
       <File FileName="vocal/SignupPage.cs" Line="54" Column="6" />
       <File FileName="vocal/SignupPage2.cs" Line="55" Column="12" />
-      <File FileName="vocal Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
