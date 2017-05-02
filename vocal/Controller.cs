@@ -119,5 +119,36 @@ namespace vocal
 			App.newUsers = matches.data;
 			return matches.data;
 		}
+		public async Task<bool> Like(String currentUser, String match)
+		{
+			var content = new FormUrlEncodedContent(new[]
+			{
+				new KeyValuePair<string, string>("liker", currentUser),
+				new KeyValuePair<string, string>("likee", match),
+				new KeyValuePair<string, string>("like_type", "true"),
+			});
+			var result = await client.PostAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/Users/like", content);
+			if (result.IsSuccessStatusCode)
+			{
+				return true;
+			}
+			return false;
+		}
+
+		public async Task<bool> Dislike(String currentUser, String nonMatch)
+		{
+			var content = new FormUrlEncodedContent(new[]
+			{
+						new KeyValuePair<string, string>("liker", currentUser),
+						new KeyValuePair<string, string>("likee", nonMatch),
+						new KeyValuePair<string, string>("like_type", "false"),
+					});
+			var result = await client.PostAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/Users/like", content);
+			if (result.IsSuccessStatusCode)
+			{
+				return true;
+			}
+			return false;
+		}
 	}
 }

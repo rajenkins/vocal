@@ -20,6 +20,7 @@ namespace vocal
 		public Image Photo { get; set;}
 		public Label Location { get; set;}
 		public Label Description { get; set;}
+		public string Username { get; set; }
 
 		public CardView ()
 		{

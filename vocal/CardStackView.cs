@@ -25,6 +25,7 @@ namespace vocal
 			public string Photo { get; set;}
 			public string Location { get; set;}
 			public string Description { get; set;}
+			public string Username { get; set; }
 
 			public Item(VocalUser user) 
 			{
@@ -36,6 +37,7 @@ namespace vocal
 				{
 					Name = user.Username;
 				}
+				Username = user.Username;
 				Photo = user.Photo;
 				Location = user.Location;
 				Description = user.Description;
@@ -132,6 +134,7 @@ namespace vocal
 				if (itemIndex >= ItemsSource.Count) break;
 				var card = cards[i];
 				card.Name.Text = ItemsSource[itemIndex].Name;
+				card.Username = ItemsSource[itemIndex].Username;
 				card.Location.Text = ItemsSource[itemIndex].Location;
 				card.Description.Text = ItemsSource[itemIndex].Description;
 				card.Photo.Source = ImageSource.FromFile(ItemsSource[itemIndex].Photo);
@@ -211,11 +214,13 @@ namespace vocal
 				
 				if (SwipedRight != null && cardDistance > 0) {
 					SwipedRight(itemIndex);
+					controller.Like(App.username, topCard.Username);
 					loadNextCard();
 				}
 				else if (SwipedLeft != null)
 				{
 					SwipedLeft(itemIndex);
+					controller.Dislike(App.username, topCard.Username);
                     loadNextCard();
 				}
 
@@ -292,12 +297,16 @@ namespace vocal
 		public async Task<VocalUser> loadNextCard()
 		{
 			int len = App.newUsers.Count;
-			int r = App.rnd.Next(len);
-			String nextUser = App.newUsers[r];
-			App.newUsers.RemoveAt(r);
-			var res = await controller.GetUserAsync(nextUser);
-			ItemsSource.Add(new CardStackView.Item(res));
-			return res;
+			if (len > 0)
+			{
+				int r = App.rnd.Next(len);
+				String nextUser = App.newUsers[r];
+				App.newUsers.RemoveAt(r);
+				var res = await controller.GetUserAsync(nextUser);
+				ItemsSource.Add(new CardStackView.Item(res));
+				return res;
+			}
+			return new VocalUser();
 		}
 	}
 }

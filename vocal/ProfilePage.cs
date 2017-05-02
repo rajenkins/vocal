@@ -115,9 +115,10 @@ namespace vocal
 		{
 			await Navigation.PushAsync(new UpdateBasicPage(uName, uAge, controller));
 		}
-		async void OnAppearing(object sender, EventArgs args)
+		protected override void OnAppearing()
 		{
-			await PopulateInfo();
+			base.OnAppearing();
+			PopulateInfo();
 		}
 	}
 }
