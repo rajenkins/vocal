@@ -126,7 +126,7 @@ namespace vocal
 				var card = cards[0];
 				card.Name.Text = ItemsSource[0].Name;
 				card.Username = ItemsSource[0].Username;
-				card.Location.Text = ItemsSource[0].Location;
+				card.Location.Text = "Chapel Hill, NC";
 				card.Description.Text = ItemsSource[0].Description;
 				card.AudioUrl = ItemsSource[0].Url;
 			}
@@ -175,6 +175,7 @@ namespace vocal
 			if (itemIndex < ItemsSource.Count)
 			{
 				backCard.Name.Text = ItemsSource[itemIndex].Name;
+				backCard.Location.Text = "Chapel Hill, NC";
 				backCard.Username = ItemsSource[itemIndex].Username;
 				backCard.AudioUrl = ItemsSource[itemIndex].Url;
 			}
@@ -241,6 +242,7 @@ namespace vocal
 				// scale the back card down
 				var prevCard = cards [PrevCardIndex (topCardIndex)];
 				prevCard.Name.Text = "";
+				prevCard.Location.Text = "";
 				await prevCard.ScaleTo(BackCardScale, AnimLength, Easing.SpringOut);
 
 			}	
@@ -272,6 +274,7 @@ namespace vocal
 
 				// set the data
 				topCard.Name.Text = "";
+				topCard.Location.Text = "";
 				//topCard.Name.Text = ItemsSource[itemIndex].Name;
 				//topCard.Location.Text = ItemsSource[itemIndex].Location;
 				//topCard.Description.Text = ItemsSource[itemIndex].Description;

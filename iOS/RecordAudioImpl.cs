@@ -75,13 +75,13 @@ namespace vocal.iOS
 			recorder.Stop();
 			return audioFilePath;
 		}
-		public StreamContent Stop2() 
+		public vocal.SoundFileInfo Stop2() 
 		{
 			recorder.Stop();
 			var content = new MultipartFormDataContent();
 			var fileStream = new FileStream(audioFilePath, FileMode.Open, FileAccess.Read);
 			var stream = new StreamContent(fileStream);
-			return stream;
+			return new SoundFileInfo(stream, "wav");
 		}
 
 	}

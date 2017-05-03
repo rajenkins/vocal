@@ -48,14 +48,14 @@ namespace vocal.Droid
 
 			return "";
 		}
-		public StreamContent Stop2()
+		public vocal.SoundFileInfo Stop2()
 		{
 			recorder.Stop ();
 			recorder.Reset ();
 			var content = new MultipartFormDataContent();
 			var fileStream = new FileStream(audioFilePath, FileMode.Open, FileAccess.Read);
 			var stream = new StreamContent(fileStream);
-			return stream;
+			return new SoundFileInfo(stream, "m4a");
 		}
 
 	}

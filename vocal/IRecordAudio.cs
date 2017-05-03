@@ -9,5 +9,5 @@ public interface IRecordAudio
 
 	string Stop();
 
-	StreamContent Stop2();
+	vocal.SoundFileInfo Stop2();
 }

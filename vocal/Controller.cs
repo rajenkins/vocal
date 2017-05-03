@@ -159,10 +159,17 @@ namespace vocal
 			}
 			return false;
 		}
-		public async Task<bool> SaveAudio(StreamContent stream)
+		public async Task<bool> SaveAudio(SoundFileInfo audioFile)
 		{
 			var content = new MultipartFormDataContent();
-			content.Add(stream, "upload", "upload.m4a");
+			if (audioFile.format == "wav")
+			{
+				content.Add(audioFile.stream, "upload", "upload.wav");
+			}
+			if (audioFile.format == "m4a")
+			{
+				content.Add(audioFile.stream, "upload", "upload.m4a");
+			}
 			content.Add(new StringContent(App.username), "username");
             content.Add(new StringContent("cat1"), "category");
 			var result = await client.PostAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/upload", content);

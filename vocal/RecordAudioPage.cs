@@ -50,7 +50,7 @@ namespace vocal
 	};
 	matchButton2.Clicked += (sender, e) =>
 			{
-				StreamContent audioFile = Get<IRecordAudio>().Stop2();
+				SoundFileInfo audioFile = Get<IRecordAudio>().Stop2();
 				controller.SaveAudio(audioFile);
 				//CrossMediaManager.Current.Play(audioFile);
 
