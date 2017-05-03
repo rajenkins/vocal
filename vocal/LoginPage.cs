@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 
@@ -38,7 +38,7 @@ namespace vocal
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			loginButton.Clicked += login;
 
@@ -50,7 +50,7 @@ namespace vocal
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			signupButton.Clicked += signup;
 

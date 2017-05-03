@@ -21,8 +21,8 @@ namespace vocal
 	{
 		public Label Name { get; set;}
 		public Button PlayAudio { get; set;}
-		public Button LikeButton { get; set;}
-		public Button DislikeButton { get; set;}
+		//public Button LikeButton { get; set;}
+		//public Button DislikeButton { get; set;}
 		public string AudioUrl { get; set;}
 		public Label Location { get; set;}
 		public Label Description { get; set;}
@@ -62,7 +62,7 @@ namespace vocal
 				//WidthRequest = 200
 			};
 			PlayAudio.Clicked += PlayUserAudio;
-			LikeButton = new Button()
+			/*LikeButton = new Button()
 			{
 				Text = "Like",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
@@ -70,7 +70,7 @@ namespace vocal
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				BackgroundColor = Color.White,
-				HeightRequest = 100,
+				HeightRequest = 80,
 				IsVisible = Device.OnPlatform<bool>(true, false, false)
 			};
 			LikeButton.Clicked += LikeLink;
@@ -82,10 +82,11 @@ namespace vocal
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				BackgroundColor = Color.White,
-				HeightRequest = 100,
+				HeightRequest = 80,
 				IsVisible = Device.OnPlatform<bool>(true, false, false)
 			};
 			DislikeButton.Clicked += DislikeLink;
+			*/
 			view.Children.Add (PlayAudio,
 				Constraint.Constant (0), 
 				//Constraint.Constant (50),
@@ -100,12 +101,12 @@ namespace vocal
 					return (parent.Height * 0.80);
 				})
 			);
-			view.Children.Add (LikeButton,
+			/*view.Children.Add (LikeButton,
 				Constraint.Constant (0), 
 				//Constraint.Constant (50),
 				Constraint.RelativeToParent ((parent) => {
 					double h = parent.Height * 0.80;
-					return ((parent.Height - h)/2) + 20;
+					return ((parent.Height - h)/2) + 40;
 				}),
 				Constraint.RelativeToParent ((parent) => {					
 					return parent.Width;
@@ -119,7 +120,7 @@ namespace vocal
 				//Constraint.Constant (50),
 				Constraint.RelativeToParent ((parent) => {
 					double h = parent.Height * 0.80;
-					return ((parent.Height - h)/2) + 20;
+					return ((parent.Height - h)/2) + 130;
 				}),
 				Constraint.RelativeToParent ((parent) => {					
 					return parent.Width;
@@ -128,7 +129,7 @@ namespace vocal
 					return (parent.Height* 0.80);
 				})
 			);
-
+*/
 			// items label
 			Name = new Label () {				
 				TextColor = Color.White,

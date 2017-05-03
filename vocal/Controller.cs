@@ -164,7 +164,7 @@ namespace vocal
 			var content = new MultipartFormDataContent();
 			if (audioFile.format == "wav")
 			{
-				content.Add(audioFile.stream, "upload", "upload.wav");
+			//	content.Add(audioFile.stream, "upload", "upload.wav");
 			}
 			if (audioFile.format == "m4a")
 			{

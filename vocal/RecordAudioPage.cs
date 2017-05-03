@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using Plugin.MediaManager;
 using Plugin.MediaManager.Abstractions;
@@ -32,7 +32,7 @@ namespace vocal
 			BorderWidth = 2,
 			HorizontalOptions = LayoutOptions.Fill,
 			VerticalOptions = LayoutOptions.CenterAndExpand,
-			HeightRequest = 100
+			HeightRequest = 80
 		};
 		matchButton.Clicked += (sender, e) =>
 			{

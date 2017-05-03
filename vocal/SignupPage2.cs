@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 namespace vocal
 {
@@ -30,7 +30,7 @@ namespace vocal
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			pwdSubmit.Clicked += CreateAccount;
             this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);

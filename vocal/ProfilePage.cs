@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using Plugin.MediaManager;
 using Plugin.MediaManager.Abstractions;
@@ -50,7 +50,7 @@ namespace vocal
 				Font = Font.SystemFontOfSize(NamedSize.Medium),
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			basicButton.Clicked += showUpdateBasicPage;
 
@@ -60,7 +60,7 @@ namespace vocal
 				Font = Font.SystemFontOfSize(NamedSize.Medium),
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			recordButton.Clicked += showRecordAudioPage;
 
@@ -70,7 +70,7 @@ namespace vocal
 				Font = Font.SystemFontOfSize(NamedSize.Medium),
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			listenButton.Clicked += (sender, e) =>
 			{

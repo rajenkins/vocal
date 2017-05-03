@@ -1,4 +1,4 @@
-﻿//
+//
 //  Copyright (c) 2016 MatchboxMobile
 //  Licensed under The MIT License (MIT)
 //  http://opensource.org/licenses/MIT
@@ -28,7 +28,7 @@ namespace vocal
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			meetButton.Clicked += OnMeetButtonClicked;
 			Button chatButton = new Button
@@ -38,7 +38,7 @@ namespace vocal
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			chatButton.Clicked += OnChatButtonClicked;
 
@@ -49,7 +49,7 @@ namespace vocal
 				BorderWidth = 2,
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HeightRequest = 100
+				HeightRequest = 80
 			};
 			profButton.Clicked += OnProfButtonClicked;
 
