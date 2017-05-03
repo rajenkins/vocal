@@ -151,10 +151,10 @@ namespace vocal
 			}
 			return false;
 		}
-		public async Task<bool> SaveAuio(StreamContent stream)
+		public async Task<bool> SaveAudio(StreamContent stream)
 		{
 			var content = new MultipartFormDataContent();
-			content.Add(stream, "upload", "upload.wav");
+			content.Add(stream, "upload", "upload.m4a");
 			content.Add(new StringContent(App.username), "username");
             content.Add(new StringContent("cat1"), "category");
 			var result = await client.PostAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/upload", content);
