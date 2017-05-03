@@ -37,10 +37,11 @@ namespace vocal
 			{
 				Children =
 								{
-									header,
+									header
 								}
 			};
-			this.Content = parent;
+			this.Content = new ScrollView { Content = parent };
+				
 			AddMatches(parent);
 		}
 
@@ -53,12 +54,23 @@ namespace vocal
 			List<String> matches = await controller.GetMatchesAsync(App.username);
 			foreach (var m in matches) 
 			{
-				Label match = new Label
+				Button match = new Button
 				{
-					Text = m
+					Text = m,
+					Font = Font.SystemFontOfSize(NamedSize.Large),
+					BorderWidth = 2,
+					HorizontalOptions = LayoutOptions.Fill,
+					HeightRequest = 100
 				};
+				match.Clicked += ShowProfile;
 				page.Children.Add(match);
 			}
+		}
+		async void ShowProfile(object sender, EventArgs e)
+		{
+			Button button = (Button) sender;
+			String user = button.Text;
+			Navigation.PushAsync(new UserProfile(user));
 		}
 	}
 }
