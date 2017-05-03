@@ -3,6 +3,7 @@ using System;
 using Xamarin.Forms;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Plugin.MediaManager;
 
 namespace vocal
 {
@@ -12,7 +13,7 @@ namespace vocal
 		public class Item
 		{
 			public string Name { get; set;}
-			public string Photo { get; set;}
+			public string Url { get; set;}
 			public string Location { get; set;}
 			public string Description { get; set;}
 			public string Username { get; set; }
@@ -28,7 +29,7 @@ namespace vocal
 					Name = user.Username;
 				}
 				Username = user.Username;
-				Photo = user.Photo;
+				Url = user.BioUrl;
 				Location = user.Location;
 				Description = user.Description;
 			}
@@ -127,7 +128,7 @@ namespace vocal
 				card.Username = ItemsSource[0].Username;
 				card.Location.Text = ItemsSource[0].Location;
 				card.Description.Text = ItemsSource[0].Description;
-				card.Photo.Source = ImageSource.FromFile(ItemsSource[0].Photo);
+				card.AudioUrl = ItemsSource[0].Url;
 			}
 			for (int i = 0; i < Math.Min(NumCards, ItemsSource.Count); i++)	{
 				if (itemIndex >= ItemsSource.Count) break;
@@ -175,6 +176,7 @@ namespace vocal
 			{
 				backCard.Name.Text = ItemsSource[itemIndex].Name;
 				backCard.Username = ItemsSource[itemIndex].Username;
+				backCard.AudioUrl = ItemsSource[itemIndex].Url;
 			}
 //topCard.Location.Text = ItemsSource[itemIndex].Location;
 //topCard.Description.Text = ItemsSource[itemIndex].Description;

@@ -11,16 +11,21 @@
 //
 using Xamarin.Forms;
 using SQLite;
+using System;
+using Plugin.MediaManager;
+using Plugin.MediaManager.Abstractions;
 
 namespace vocal
 {
 	public class CardView : ContentView
 	{
 		public Label Name { get; set;}
-		public Image Photo { get; set;}
+		public Button PlayAudio { get; set;}
+		public string AudioUrl { get; set;}
 		public Label Location { get; set;}
 		public Label Description { get; set;}
 		public string Username { get; set; }
+		public IPlaybackController PlaybackController => CrossMediaManager.Current.PlaybackController;
 
 		public CardView ()
 		{
@@ -40,14 +45,20 @@ namespace vocal
 				Constraint.RelativeToParent ((parent) => {
 					return parent.Height;
 				})
-			);				
+			);
 
 			// items image
-			Photo = new Image () {				
+			PlayAudio = new Button () {				
 				InputTransparent=true,
-				Aspect=Aspect.Fill
+				Text = "Play Audio",
+				Font = Font.SystemFontOfSize(NamedSize.Large),
+				//BorderWidth = 2,
+				HorizontalOptions = LayoutOptions.Center,
+				VerticalOptions = LayoutOptions.CenterAndExpand,
+				//WidthRequest = 200
 			};
-			view.Children.Add (Photo,
+			PlayAudio.Clicked += PlayUserAudio;
+			view.Children.Add (PlayAudio,
 				Constraint.Constant (0), 
 				//Constraint.Constant (50),
 				Constraint.RelativeToParent ((parent) => {
@@ -141,6 +152,10 @@ namespace vocal
 			);
 
 			Content = view;
+		}
+		async void PlayUserAudio(object sender, EventArgs e)
+		{
+			await CrossMediaManager.Current.Play(AudioUrl);
 		}
 	}
 }
