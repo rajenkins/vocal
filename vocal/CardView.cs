@@ -31,6 +31,7 @@ namespace vocal
 				Color = Color.FromRgb (190,0,0),
 				InputTransparent=true
 			};
+			AccessibilityEffect.SetInAccessibleTree(boxView1, true);
 			view.Children.Add (boxView1,
 				Constraint.Constant (0), Constraint.Constant (0),
 				Constraint.RelativeToParent ((parent) => {					

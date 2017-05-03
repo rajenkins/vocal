@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/RecordAudioImpl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="vocal/CardStackView.cs">
     <Files>
       <File FileName="vocal/Menu.cs" Line="27" Column="46" />
       <File FileName="vocal/LoginPage.cs" Line="19" Column="4" />
@@ -13,17 +13,21 @@
       <File FileName="vocal/SignupPage.cs" Line="54" Column="6" />
       <File FileName="vocal/SignupPage2.cs" Line="55" Column="12" />
       <File FileName="vocal/RecordAudioPage.cs" Line="57" Column="3" />
-      <File FileName="vocal/Controller.cs" Line="156" Column="4" />
+      <File FileName="vocal/Controller.cs" Line="160" Column="1" />
       <File FileName="iOS/RecordAudioImpl.cs" Line="78" Column="3" />
       <File FileName="vocal/IRecordAudio.cs" Line="12" Column="24" />
-      <File FileName="Droid/RecordAudioImpl.cs" Line="28" Column="1" />
+      <File FileName="Droid/RecordAudioImpl.cs" Line="31" Column="31" />
+      <File FileName="vocal/CardView.cs" Line="1" Column="1" />
+      <File FileName="vocal/AccessibilityEffect.cs" Line="13" Column="55" />
+      <File FileName="iOS/AddAccessibilityEffect.cs" Line="36" Column="5" />
+      <File FileName="vocal/CardStackView.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B9B21759-477D-4A54-AF2E-8274CB7D5729" />
+  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.5b24928459b242b3399a312b13813aec8fda4291" />
 </Properties>

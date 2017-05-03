@@ -257,10 +257,10 @@ namespace vocal
 				topCard.TranslateTo(0, -topCard.Y, 0);
 
 				// set the data
-				topCard.Name.Text = ItemsSource[itemIndex].Name;
-				topCard.Location.Text = ItemsSource[itemIndex].Location;
-				topCard.Description.Text = ItemsSource[itemIndex].Description;
-				topCard.Photo.Source = ImageSource.FromFile(ItemsSource[itemIndex].Photo);
+				//topCard.Name.Text = ItemsSource[itemIndex].Name;
+				//topCard.Location.Text = ItemsSource[itemIndex].Location;
+				//topCard.Description.Text = ItemsSource[itemIndex].Description;
+				//topCard.Photo.Source = ImageSource.FromFile(ItemsSource[itemIndex].Photo);
 
 				topCard.IsVisible = true;
 				itemIndex++;
