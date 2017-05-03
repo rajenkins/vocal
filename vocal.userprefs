@@ -1,6 +1,7 @@
 ﻿<Properties StartupConfiguration="{D706414C-3AE4-4EC3-8848-EE8125DF3793}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench ActiveDocument="vocal/CardStackView.cs">
     <Files>
+<<<<<<< Updated upstream
       <File FileName="vocal/IRecordAudio.cs" Line="6" Column="13" />
       <File FileName="vocal/PlayAudioPage.cs" Line="1" Column="1" />
       <File FileName="vocal/RecordAudioPage.cs" Line="1" Column="1" />
@@ -31,10 +32,41 @@
     <BreakpointStore>
       <FunctionBreakpoint line="84" column="1" function="Menu.OnButtonClicked" language="C#" />
       <Breakpoint file="/Users/jenkinsr/Documents/Classes/COMP 580/vocal/vocal/LoginPage.cs" relfile="vocal/LoginPage.cs" line="80" column="1" />
+=======
+      <File FileName="vocal/Menu.cs" Line="27" Column="46" />
+      <File FileName="vocal/LoginPage.cs" Line="19" Column="4" />
+      <File FileName="../../../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/10.8.0.175/lib/msbuild/iOS/Xamarin.iOS.Common.targets" Line="12" Column="1" />
+      <File FileName="vocal/UserProfile.cs" Line="1" Column="1" />
+      <File FileName="vocal/ChatList.cs" Line="13" Column="27" />
+      <File FileName="vocal/ChatWindow.cs" Line="10" Column="33" />
+      <File FileName="iOS/Resources/LaunchScreen.xib" />
+      <File FileName="vocal/MainPage.cs" Line="27" Column="19" />
+      <File FileName="vocal/ProfilePage.cs" Line="33" Column="5" />
+      <File FileName="vocal/SignupPage.cs" Line="54" Column="6" />
+      <File FileName="vocal/SignupPage2.cs" Line="55" Column="12" />
+      <File FileName="vocal/RecordAudioPage.cs" Line="57" Column="3" />
+      <File FileName="vocal/Controller.cs" Line="160" Column="1" />
+      <File FileName="iOS/RecordAudioImpl.cs" Line="78" Column="3" />
+      <File FileName="vocal/IRecordAudio.cs" Line="12" Column="24" />
+      <File FileName="Droid/RecordAudioImpl.cs" Line="31" Column="31" />
+      <File FileName="vocal/CardView.cs" Line="37" Column="9" />
+      <File FileName="vocal/AccessibilityEffect.cs" Line="12" Column="58" />
+      <File FileName="iOS/AddAccessibilityEffect.cs" Line="36" Column="5" />
+      <File FileName="vocal/CardStackView.cs" Line="260" Column="21" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/AccessibilityEffect.cs" relfile="vocal/AccessibilityEffect.cs" line="14" column="1" />
+      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/AccessibilityEffect.cs" relfile="vocal/AccessibilityEffect.cs" line="34" column="46" />
+      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/AccessibilityEffect.cs" relfile="vocal/AccessibilityEffect.cs" line="38" column="1" />
+      <Breakpoint file="/Users/bethbrennan/Documents/comp580/git/vocal/vocal/AccessibilityEffect.cs" relfile="vocal/AccessibilityEffect.cs" line="13" column="1" />
+>>>>>>> Stashed changes
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.vocal.Droid PreferredExecutionTarget="Android.LGH44338039a15" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.5b24928459b242b3399a312b13813aec8fda4291" />
+  <MonoDevelop.Ide.ItemProperties.vocal.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B9B21759-477D-4A54-AF2E-8274CB7D5729" />
 </Properties>

@@ -123,11 +123,11 @@ namespace vocal
 			if (itemIndex < ItemsSource.Count)
 			{
 				var card = cards[0];
-				card.Name.Text = ItemsSource[itemIndex].Name;
-				card.Username = ItemsSource[itemIndex].Username;
-				card.Location.Text = ItemsSource[itemIndex].Location;
-				card.Description.Text = ItemsSource[itemIndex].Description;
-				card.Photo.Source = ImageSource.FromFile(ItemsSource[itemIndex].Photo);
+				card.Name.Text = ItemsSource[0].Name;
+				card.Username = ItemsSource[0].Username;
+				card.Location.Text = ItemsSource[0].Location;
+				card.Description.Text = ItemsSource[0].Description;
+				card.Photo.Source = ImageSource.FromFile(ItemsSource[0].Photo);
 			}
 			for (int i = 0; i < Math.Min(NumCards, ItemsSource.Count); i++)	{
 				if (itemIndex >= ItemsSource.Count) break;
@@ -174,6 +174,7 @@ namespace vocal
 			if (itemIndex < ItemsSource.Count)
 			{
 				backCard.Name.Text = ItemsSource[itemIndex].Name;
+				backCard.Username = ItemsSource[itemIndex].Username;
 			}
 //topCard.Location.Text = ItemsSource[itemIndex].Location;
 //topCard.Description.Text = ItemsSource[itemIndex].Description;
