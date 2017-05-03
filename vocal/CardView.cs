@@ -58,7 +58,8 @@ namespace vocal
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				BackgroundColor = Color.White,
-				HeightRequest = 100
+				HeightRequest = 100,
+				TextColor = Color.Black
 				//WidthRequest = 200
 			};
 			PlayAudio.Clicked += PlayUserAudio;
@@ -92,7 +93,7 @@ namespace vocal
 				//Constraint.Constant (50),
 				Constraint.RelativeToParent ((parent) => {
 					double h = parent.Height * 0.80;
-					return ((parent.Height - h)/2) + 20;
+					return ((parent.Height - h)/2) + 120;
 				}),
 				Constraint.RelativeToParent ((parent) => {					
 					return parent.Width;

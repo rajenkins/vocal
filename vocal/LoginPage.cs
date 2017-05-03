@@ -27,7 +27,7 @@ namespace vocal
 				Text = "Password:",
 				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label))
 			};
-			passwordEntry = new Entry { Placeholder = "Password", IsPassword = true };
+			passwordEntry = new Entry { Placeholder = "Password"};
 
 			messageLabel = new Label();
 

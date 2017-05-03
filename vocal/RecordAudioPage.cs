@@ -34,24 +34,7 @@ namespace vocal
 			VerticalOptions = LayoutOptions.CenterAndExpand,
 			HeightRequest = 80
 		};
-		matchButton.Clicked += (sender, e) =>
-			{
-			/*	int rem;
-				DivRem(i, 2, out rem);
-				i++;
-				if (rem == 0) 
-				{
-					Get<IRecordAudio>().SetupRecord();
-					Get<IRecordAudio>().Record();}
-				else 
-				{
-					SoundFileInfo audioFile = Get<IRecordAudio>().Stop2();
-					controller.SaveAudio(audioFile);
-				}
-				*/
-				Get<IRecordAudio>().SetupRecord();
-		Get<IRecordAudio>().Record();
-	};
+			matchButton.Clicked += ToggleRecord;
 
 	Button matchButton2 = new Button
 	{
@@ -80,10 +63,26 @@ namespace vocal
 					 Children =
 								{
 									header,
-									matchButton,
-									matchButton2
+									matchButton
 								}
 				 };
+		}
+		async void ToggleRecord(object sender, EventArgs e)
+		{
+			int rem = i % 2;
+			i++;
+			if (rem == 0) 
+			{
+				Get<IRecordAudio>().SetupRecord();
+				Get<IRecordAudio>().Record();
+			}
+			else 
+			{
+				SoundFileInfo audioFile = Get<IRecordAudio>().Stop2();
+				await controller.SaveAudio(audioFile);
+				Navigation.PopAsync();
+			}
+
 		}
 	}
 }
