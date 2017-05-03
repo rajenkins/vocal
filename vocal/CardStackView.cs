@@ -213,7 +213,7 @@ namespace vocal
 
 				// move off the screen
 				await topCard.TranslateTo (cardDistance>0?this.Width:-this.Width, 0, AnimLength/2, Easing.SpringOut);
-				topCard.IsVisible = false; 
+ 				topCard.IsVisible = false; 
 				
 				if (SwipedRight != null && cardDistance > 0) {
 					SwipedRight(itemIndex);
