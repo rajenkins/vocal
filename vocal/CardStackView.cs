@@ -120,14 +120,19 @@ namespace vocal
 			// set the top card
 			topCardIndex = 0;
 			// create a stack of cards
-			for (int i = 0; i < Math.Min(NumCards, ItemsSource.Count); i++)	{
-				if (itemIndex >= ItemsSource.Count) break;
-				var card = cards[i];
+			if (itemIndex < ItemsSource.Count)
+			{
+				var card = cards[0];
 				card.Name.Text = ItemsSource[itemIndex].Name;
 				card.Username = ItemsSource[itemIndex].Username;
 				card.Location.Text = ItemsSource[itemIndex].Location;
 				card.Description.Text = ItemsSource[itemIndex].Description;
 				card.Photo.Source = ImageSource.FromFile(ItemsSource[itemIndex].Photo);
+			}
+			for (int i = 0; i < Math.Min(NumCards, ItemsSource.Count); i++)	{
+				if (itemIndex >= ItemsSource.Count) break;
+				var card = cards[i];
+
 				card.IsVisible = true;
 				card.Scale = GetScale(i);
 				card.RotateTo (0, 0);
@@ -164,10 +169,15 @@ namespace vocal
 			if (ignoreTouch) {
 				return;
 			}
-
 			var topCard = cards [topCardIndex];
 			var backCard = cards [PrevCardIndex (topCardIndex)];
-
+			if (itemIndex < ItemsSource.Count)
+			{
+				backCard.Name.Text = ItemsSource[itemIndex].Name;
+			}
+//topCard.Location.Text = ItemsSource[itemIndex].Location;
+//topCard.Description.Text = ItemsSource[itemIndex].Description;
+//topCard.Photo.Source = ImageSource.FromFile(ItemsSource[itemIndex].Photo);
 			// move the top card
 			if (topCard.IsVisible) {
 
@@ -227,6 +237,7 @@ namespace vocal
 
 				// scale the back card down
 				var prevCard = cards [PrevCardIndex (topCardIndex)];
+				prevCard.Name.Text = "";
 				await prevCard.ScaleTo(BackCardScale, AnimLength, Easing.SpringOut);
 
 			}	
@@ -257,6 +268,7 @@ namespace vocal
 				topCard.TranslateTo(0, -topCard.Y, 0);
 
 				// set the data
+				topCard.Name.Text = "";
 				//topCard.Name.Text = ItemsSource[itemIndex].Name;
 				//topCard.Location.Text = ItemsSource[itemIndex].Location;
 				//topCard.Description.Text = ItemsSource[itemIndex].Description;
