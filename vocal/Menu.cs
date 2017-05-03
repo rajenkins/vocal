@@ -80,7 +80,7 @@ namespace vocal
 
 		async void OnProfButtonClicked(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new PlayAudioPage());
+			await Navigation.PushAsync(new ProfilePage());
 		}
 	}
 }

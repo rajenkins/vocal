@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Plugin.MediaManager;
+using Plugin.MediaManager.Abstractions;
 using Xamarin.Forms;
 
 namespace vocal
@@ -8,6 +10,8 @@ namespace vocal
 	{
 		String uName;
 		String uAge;
+		string url;
+		IPlaybackController PlaybackController => CrossMediaManager.Current.PlaybackController;
 		Label name;
 		Label age;
 		private Controller controller = new Controller();
@@ -39,6 +43,7 @@ namespace vocal
 				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
 				HorizontalOptions = LayoutOptions.Center
 			};
+
 			Button basicButton = new Button
 			{
 				Text = "Update Basic Info",
@@ -48,6 +53,30 @@ namespace vocal
 				WidthRequest = 200
 			};
 			basicButton.Clicked += showUpdateBasicPage;
+
+			Button recordButton = new Button
+			{
+				Text = "Record New Bio",
+				Font = Font.SystemFontOfSize(NamedSize.Medium),
+				BorderWidth = 2,
+				HorizontalOptions = LayoutOptions.Center,
+				WidthRequest = 200
+			};
+			recordButton.Clicked += showRecordAudioPage;
+
+			Button listenButton = new Button
+			{
+				Text = "Listen to Audio Bio",
+				Font = Font.SystemFontOfSize(NamedSize.Medium),
+				BorderWidth = 2,
+				HorizontalOptions = LayoutOptions.Center,
+				WidthRequest = 200
+			};
+			listenButton.Clicked += (sender, e) =>
+			{
+				CrossMediaManager.Current.Play(url);
+			};
+
 			BoxView boxView = new BoxView
 			{
 				Color = Color.Accent,
@@ -57,24 +86,6 @@ namespace vocal
 			Label bio = new Label
 			{
 				Text = "Bio",
-				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-				HorizontalOptions = LayoutOptions.Center
-			};
-			Label cat1 = new Label
-			{
-				Text = "Category 1",
-				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-				HorizontalOptions = LayoutOptions.Center
-			};
-			Label cat2 = new Label
-			{
-				Text = "Category 2",
-				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-				HorizontalOptions = LayoutOptions.Center
-			};
-			Label cat3 = new Label
-			{
-				Text = "Category 1",
 				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
 				HorizontalOptions = LayoutOptions.Center
 			};
@@ -94,9 +105,8 @@ namespace vocal
 									basicButton,
 									boxView,
 									bio,
-									cat1,
-									cat2,
-									cat3
+									listenButton,
+									recordButton
 								}
 				 };
 		}
@@ -107,6 +117,7 @@ namespace vocal
 			uAge = user.Age.ToString();
 			name.Text = uName;
 			age.Text = uAge;
+			url = await controller.GetSoundUrl(App.username);
 			return user;
 		}
 
@@ -114,6 +125,13 @@ namespace vocal
 		{
 			await Navigation.PushAsync(new UpdateBasicPage(uName, uAge, controller));
 		}
+
+		async void showRecordAudioPage(object sender, EventArgs e)
+		{
+
+			await Navigation.PushAsync(new RecordAudioPage());
+		}
+
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();

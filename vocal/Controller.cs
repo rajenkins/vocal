@@ -33,6 +33,14 @@ namespace vocal
 			return exists;
 		}
 
+		public async Task<string> GetSoundUrl(String username)
+		{
+			var response = await client.GetStringAsync("http://wwwx.cs.unc.edu/Courses/comp580-s17/users/Vocal/rest.cgi/sounds/cat1/" + username);
+			JObject o = JObject.Parse(response);
+			string url = (string)o["link"];
+			return url;
+		}
+
 		public async Task<bool> AddUser(UserAccount user)
 		{
 			if ((user.username.Length > 0) && (user.password.Length > 0))
