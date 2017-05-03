@@ -36,9 +36,9 @@ namespace vocal
 				Text = "Log In",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = 200
+				HeightRequest = 100
 			};
 			loginButton.Clicked += login;
 
@@ -48,9 +48,9 @@ namespace vocal
 				Text = "Sign Up",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = 200
+				HeightRequest = 100
 			};
 			signupButton.Clicked += signup;
 

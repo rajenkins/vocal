@@ -28,9 +28,9 @@ namespace vocal
 				Text = "Create Account",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = 200
+				HeightRequest = 100
 			};
 			pwdSubmit.Clicked += CreateAccount;
             this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);

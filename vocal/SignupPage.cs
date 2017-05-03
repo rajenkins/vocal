@@ -27,9 +27,9 @@ namespace vocal
 				Text = "Submit",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = 200
+				HeightRequest = 100
 			};
 			nameSubmit.Clicked += SubmitName;
             this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);

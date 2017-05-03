@@ -12,6 +12,7 @@ namespace vocal
 	{
 		public IPlaybackController PlaybackController => CrossMediaManager.Current.PlaybackController;
 		public Controller controller = new Controller();
+		public static int i = 0;
 
 		public RecordAudioPage()
 		{
@@ -29,12 +30,25 @@ namespace vocal
 			Text = "RECORD AUDIO",
 			Font = Font.SystemFontOfSize(NamedSize.Large),
 			BorderWidth = 2,
-			HorizontalOptions = LayoutOptions.Center,
+			HorizontalOptions = LayoutOptions.Fill,
 			VerticalOptions = LayoutOptions.CenterAndExpand,
-			WidthRequest = 200
+			HeightRequest = 100
 		};
 		matchButton.Clicked += (sender, e) =>
 			{
+			/*	int rem;
+				DivRem(i, 2, out rem);
+				i++;
+				if (rem == 0) 
+				{
+					Get<IRecordAudio>().SetupRecord();
+					Get<IRecordAudio>().Record();}
+				else 
+				{
+					SoundFileInfo audioFile = Get<IRecordAudio>().Stop2();
+					controller.SaveAudio(audioFile);
+				}
+				*/
 				Get<IRecordAudio>().SetupRecord();
 		Get<IRecordAudio>().Record();
 	};

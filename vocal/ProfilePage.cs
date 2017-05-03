@@ -49,8 +49,8 @@ namespace vocal
 				Text = "Update Basic Info",
 				Font = Font.SystemFontOfSize(NamedSize.Medium),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
-				WidthRequest = 200
+				HorizontalOptions = LayoutOptions.Fill,
+				HeightRequest = 100
 			};
 			basicButton.Clicked += showUpdateBasicPage;
 
@@ -59,8 +59,8 @@ namespace vocal
 				Text = "Record New Bio",
 				Font = Font.SystemFontOfSize(NamedSize.Medium),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
-				WidthRequest = 200
+				HorizontalOptions = LayoutOptions.Fill,
+				HeightRequest = 100
 			};
 			recordButton.Clicked += showRecordAudioPage;
 
@@ -69,8 +69,8 @@ namespace vocal
 				Text = "Listen to Audio Bio",
 				Font = Font.SystemFontOfSize(NamedSize.Medium),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
-				WidthRequest = 200
+				HorizontalOptions = LayoutOptions.Fill,
+				HeightRequest = 100
 			};
 			listenButton.Clicked += (sender, e) =>
 			{

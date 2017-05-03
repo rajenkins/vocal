@@ -27,8 +27,8 @@ namespace vocal
 				Text = "Update",
 				Font = Font.SystemFontOfSize(NamedSize.Medium),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
-				WidthRequest = 100
+				HorizontalOptions = LayoutOptions.Fill,
+				HeightRequest = 100
 			};
 			updateButton.Clicked += updateNameAge;
             this.Padding = new Thickness(10, Device.OnPlatform(20, 0, 0), 10, 5);

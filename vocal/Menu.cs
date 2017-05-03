@@ -26,9 +26,9 @@ namespace vocal
 				Text = "Meet",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = 200
+				HeightRequest = 100
 			};
 			meetButton.Clicked += OnMeetButtonClicked;
 			Button chatButton = new Button
@@ -36,9 +36,9 @@ namespace vocal
 				Text = "Chat",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = 200
+				HeightRequest = 100
 			};
 			chatButton.Clicked += OnChatButtonClicked;
 
@@ -47,9 +47,9 @@ namespace vocal
 				Text = "Profile",
 				Font = Font.SystemFontOfSize(NamedSize.Large),
 				BorderWidth = 2,
-				HorizontalOptions = LayoutOptions.Center,
+				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				WidthRequest = 200
+				HeightRequest = 100
 			};
 			profButton.Clicked += OnProfButtonClicked;
 
